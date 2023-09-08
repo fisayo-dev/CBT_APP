@@ -2,7 +2,7 @@ from questions import questions
 from line import generate
 from math import fabs
 
-
+# Sorts questions list
 questionList = questions
 
 # Intro
