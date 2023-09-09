@@ -1,8 +1,12 @@
 from questions import questions
 from line import generate
 from math import fabs
+from random import shuffle
 
 # Sorts questions list
+shuffle(questions)
+
+# Re-assigns it to this variable
 questionList = questions
 
 # Intro

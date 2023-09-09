@@ -8,4 +8,5 @@ cd CBT_APP
 python cbt.py
 
  ```
-A SIMPLE CLI CB TBUILT WITH PYTHON
+
+# Python CLI based CBT APP EDITABLE and USER FRIENDLY
