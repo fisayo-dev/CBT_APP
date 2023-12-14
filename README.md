@@ -7,6 +7,6 @@ git clone https://github.com/fisayo-dev/CBT_APP.git/
 cd CBT_APP
 python cbt.py
 
- ```
+```
 
 # Python CLI based CBT APP EDITABLE and USER FRIENDLY

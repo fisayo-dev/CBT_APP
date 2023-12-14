@@ -1,7 +1,8 @@
 from questions import questions
-from line import generate
+from line import generate 
 from math import fabs
 from random import shuffle
+from scoreStatus import *
 
 # Sorts questions list
 shuffle(questions)
@@ -51,7 +52,7 @@ def startTest(index, score):
   # Input Answer
   answer = input('Enter your answer: ')
 
-  if correctAnswer == answer:
+  if correctAnswer.upper() == answer.upper():
     score += 1
   if index + 1 >= len(questionList):
     generate(20)
@@ -61,19 +62,19 @@ def startTest(index, score):
     scoreStatus = ''
 
     if scorePercentage >= 90:
-      scoreStatus = 'You performed excellent'
+      scoreStatus = status_90
     elif scorePercentage >= 80:
-      scoreStatus = 'You Did well.'
+      scoreStatus = status_80
     elif scorePercentage >= 65:
-      scoreStatus = 'You are above average. But don\'t relent'
+      scoreStatus = status_65
     elif scorePercentage >= 50:
-      scoreStatus = 'You Tried, you can do better'
+      scoreStatus = status_50
     elif scorePercentage >= 30:
-      scoreStatus = 'You didn\'t have a bad score, But it could be better'
+      scoreStatus = status_30
     elif scorePercentage >= 15:
-      scoreStatus = 'Are you sure u read well for the test, try redoing.'
+      scoreStatus = status_15
     elif scorePercentage >= 8 or scorePercentage == 0:
-      scoreStatus = 'I\'m sorry to bring it to you but you failed woefully.'
+      scoreStatus = status_0
 
     print(f'Congrats {response2}, you scored {scorePercentage}%. {scoreStatus}')
     generate(20)
@@ -86,6 +87,7 @@ def startTest(index, score):
 def initTest(index, score):
   startTest(index, score)
 
-if response == 'y' or 'Y' :
-  if response != '':
-    initTest(index, score)
+if response == 'y' or 'Y' or response != '' :
+  initTest(index, score)
+else:
+  exit()
