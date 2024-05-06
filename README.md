@@ -9,4 +9,7 @@ python cbt.py
 
 ```
 
+# CAUTION: Care should be exercised when altering the modules.
+
+
 # Python CLI based CBT APP EDITABLE and USER FRIENDLY
