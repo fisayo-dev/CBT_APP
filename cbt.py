@@ -58,7 +58,7 @@ def startTest(index, score):
     generate(20)
     generate(20)
     scorePercentage = fabs((score/len(questionList))*100)
-
+2
     scoreStatus = ''
 
     if scorePercentage >= 90:
